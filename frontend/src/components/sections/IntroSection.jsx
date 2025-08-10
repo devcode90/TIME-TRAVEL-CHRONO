@@ -34,7 +34,6 @@ const IntroSection = () => {
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Introduction to Time Travel
@@ -42,9 +41,8 @@ const IntroSection = () => {
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
               {mockData.introduction.content}
             </p>
-          </div>
+          </motion.div>
 
-          {/* Key Questions */}
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
               { icon: Clock, title: "What is Time?", description: "Explore the fundamental nature of temporal dimension" },
@@ -70,7 +68,6 @@ const IntroSection = () => {
             ))}
           </motion.div>
 
-          {/* Historical Timeline */}
           <motion.div variants={itemVariants}>
             <h3 className="text-3xl font-bold text-center mb-12 text-white">
               Historical Timeline of Time Travel Ideas
@@ -104,7 +101,6 @@ const IntroSection = () => {
                     </Card>
                   </div>
                   
-                  {/* Timeline connector */}
                   <div className="hidden md:flex flex-col items-center">
                     <div className="w-4 h-4 bg-blue-400 rounded-full border-4 border-slate-950"></div>
                     {index < mockData.introduction.timeline.length - 1 && (
